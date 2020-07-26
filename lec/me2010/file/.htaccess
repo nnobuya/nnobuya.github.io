@@ -1,0 +1,10 @@
+AuthUserFile /home/nishmrnb/etc/.htpasswd
+
+AuthName "for students"
+AuthType Basic
+
+require valid-user
+
+<Files ~ "^.(htpasswd|htaccess)$">
+	deny from all
+</Files>
