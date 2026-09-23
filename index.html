@@ -1,103 +1,204 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nobuya Nishimura</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Georgia, "Times New Roman", "Yu Mincho", "Hiragino Mincho ProN", serif;
+        line-height: 1.5;
+      }
 
-    <title>
-      Nobuya NISHIMURA
-    </title>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
+      body {
+        margin: 0;
+        color: #111;
+        background: #fff;
+      }
+
+      .page {
+        width: min(100% - 2rem, 72rem);
+        margin-inline: auto;
+      }
+
+      .site-header {
+        padding-block: 1.25rem 1.5rem;
+        text-align: center;
+        border-block: 1px solid #777;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        line-height: 1.2;
+      }
+
+      .affiliation,
+      .address {
+        margin: 1.25rem 0 0;
+        font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+        font-weight: 700;
+      }
+
+      .affiliation-jp {
+        display: block;
+        margin-top: 0.55rem;
+      }
+
+      .address {
+        font-style: normal;
+      }
+
+      .email-image {
+        display: block;
+        width: min(25rem, 100%);
+        height: auto;
+        margin: 1.25rem auto 0;
+      }
+
+      main {
+        padding-block: 1.75rem;
+      }
+
+      .language-columns {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(1.5rem, 7vw, 6rem);
+      }
+
+      .language-section h2 {
+        margin: 0 0 0.75rem;
+        font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+        line-height: 1.25;
+      }
+
+      .link-list {
+        margin: 0;
+        padding-inline-start: 1.4em;
+        list-style-position: outside;
+      }
+
+      .link-list li {
+        margin-block: 0.65rem;
+        padding-inline-start: 0.15em;
+        font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+        font-weight: 700;
+        line-height: 1.35;
+      }
+
+      .link-list li::marker {
+        color: currentColor;
+        font-size: 0.8em;
+      }
+
+      .language-section[lang="ja"] .link-list {
+        padding-inline-start: 0;
+        list-style: none;
+      }
+
+      a {
+        color: #0000ee;
+        text-underline-offset: 0.12em;
+      }
+
+      a:visited {
+        color: #551a8b;
+      }
+
+      a:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 3px;
+      }
+
+      .site-footer {
+        padding-block: 0.75rem 1.25rem;
+        border-top: 1px solid #777;
+      }
+
+      .site-footer p {
+        margin: 0;
+      }
+
+      @media (max-width: 36rem) {
+        .page {
+          width: min(100% - 1rem, 72rem);
+        }
+
+        .language-columns {
+          gap: 1rem;
+        }
+
+        .link-list {
+          padding-inline-start: 1.15em;
+        }
+      }
+    </style>
   </head>
-
   <body>
+    <div class="page">
+      <header class="site-header">
+        <h1>Dr. Nobuya Nishimura <span lang="ja">（西村 信哉）</span></h1>
 
-    <hr>
-    <center>
-      <h1>Dr. Nobuya Nishimura （西村 信哉）</h1>
-    </center>
-    <hr>
+        <p class="affiliation">
+          <a href="https://www.kogakuin.ac.jp/english/at_kgu/support.html">Academic Support Center</a>,
+          <a href="https://www.kogakuin.ac.jp/english/">Kogakuin University</a>
+          <span class="affiliation-jp" lang="ja">
+            <a href="https://www.kogakuin.ac.jp/">工学院大学</a>,
+            <a href="https://www.kogakuin.ac.jp/faculty/edu/education.html#2">教育支援機構</a>,
+            <a href="https://www.kogakuin.ac.jp/student/campuslife/gscenter.html">学習支援センター</a>
+          </span>
+        </p>
 
-    <center>
-    <h2>
-      <a href="https://www.kogakuin.ac.jp/english/at_kgu/support.html">Academic Support Center</a>, <a href='https://www.kogakuin.ac.jp/english/'>Kogakuin University</a>
-      <br><br>
-      <a href='https://www.kogakuin.ac.jp/'>工学院大学</a>,
-      <a href='https://www.kogakuin.ac.jp/faculty/edu/education.html#2'>教育支援機構</a>,
-      <a href="https://www.kogakuin.ac.jp/student/campuslife/gscenter.html">学習支援センター</a>
-    </h2>
+        <address class="address">
+          <span lang="ja">東京都八王子市中野町2665-1</span><br>
+          2665-1 Nakano-machi, Hachioji, Tokyo, Japan
+        </address>
 
-    <h2>
-    <br>
-    東京都八王子市中野町2665-1
-    <br>
-    2665-1 Nakano-machi, Hachioji, Tokyo, Japan
-    <br>
-    </h2>
+        <img class="email-image" src="./fig/email.png" width="400" alt="Email address">
+      </header>
 
-    <img src="./fig/email.png" width=400>
-    </center>
+      <main>
+        <nav class="language-columns" aria-label="Main navigation">
+          <section class="language-section" aria-labelledby="english-heading">
+            <h2 id="english-heading">English Page</h2>
+            <ul class="link-list">
+              <li><a href="./cv/">Profile</a></li>
+              <li><a href="./res/index.html">Research</a></li>
+              <li><a href="./open/">Open Sources</a></li>
+              <li><a href="./pctips/">Computer Tips</a></li>
+              <li><a href="./lec/">Teaching</a></li>
+              <li><a href="./outreach/">Public Outreach</a></li>
+              <li><a href="./genso/index.html">GENSOGAKUSHO x GENSOGOSEI</a></li>
+              <li><a href="./oth/">Others</a></li>
+            </ul>
+          </section>
 
-    <hr>
+          <section class="language-section" lang="ja" aria-labelledby="japanese-heading">
+            <h2 id="japanese-heading">日本語ページ</h2>
+            <ul class="link-list">
+              <li><a href="./cv/index_jp.html">プロフィール (履歴書)</a></li>
+              <li>研究業績</li>
+              <li><a href="./open/index.html">公開データ</a></li>
+              <li><a href="./pctips/index.html">コンピュータ・メモ</a></li>
+              <li><a href="./lec/">教育活動</a></li>
+              <li><a href="./out/index_jp.html">アウトリーチ活動</a></li>
+              <li><a href="./genso/index_jp.html">元素楽章 x 元素合成</a></li>
+              <li>他のものたち</li>
+            </ul>
+          </section>
+        </nav>
+      </main>
 
-    <center>
-    <br>
-    <table>
-      <tr>
-	<td><h2><ul>English Page</ul></h2></td>
-	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-	<td><h2>日本語ページ<h2></td>
-      </tr>
-      <tr>
-	<td><ul><li><a href="./cv/"><h2>Profile</h2></a></li></ul></td>
-	<td></td>
-	<td><a href="./cv/index_jp.html"><h2>プロフィール (履歴書)</h2></a></td>
-      </tr>
-      <tr>
-	<td><ul><li><a href="./res/index.html"><h2>Research</h2></a></li></ul></td>
-	<td></td>
-	<td><h2>研究業績</h2></td>
-      </tr>
-
-      <tr>
-	<td><ul><li><a href="./open/"><h2>Open Sources</h2></a></li></ul></td>
-	<td></td>
-	<td><a href="./open/index.html"><h2>公開データ</h2></a></td>
-      </tr>
-
-      <tr>
-	<td><ul><li><a href="./pctips/"><h2>Computer Tips</h2></a></li></ul></td>
-	<td></td>
-	<td><a href="./pctips/index.html"><h2>コンピュータ・メモ</h2></a></td>
-      </tr>
-
-      <tr>
-	<td><ul><li><a href="./lec/"><h2>Teaching</h2></a></li></ul></td>
-	<td></td>
-	<td><a href="./lec/"><h2>教育活動</h2></a></td>
-      </tr>
-      <tr>
-	<td><ul><li><a href="./outreach/"><h2>Public Outreach</h2></a></li></ul></td>
-	<td></td>
-	<td><a href="./out/index_jp.html"><h2>アウトリーチ活動</h2></a></td>
-      </tr>
-      <tr>
-	<td><ul><li><a href="./genso/index.html"><h2>GENSOGAKUSHO x GENSOGOSEI</h2></a></li></ul></td>
-	<td></td>
-	<td><a href="./genso/index_jp.html"><h2>元素楽章 x 元素合成</h2></a></td>
-      </tr>
-      <tr>
-	<td><ul><li><a href="./oth/"><h2>Others</h2></a></li></ul></td>
-	<td></td>
-	<td><h2>他のものたち</h2></td>
-      </tr>
-    </table>
-
-    </center>
-
-    <hr>
-
-    Latest Update: 7 Jan 2023
-
+      <footer class="site-footer">
+        <p>Latest Update: <time datetime="2023-01-07">7 Jan 2023</time></p>
+      </footer>
+    </div>
   </body>
-
 </html>
