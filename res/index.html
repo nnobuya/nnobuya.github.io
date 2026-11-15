@@ -1,104 +1,244 @@
-<html>
-  <head>
-    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research in nucleosynthesis and nuclear astrophysics: stellar explosions, neutron stars, heavy-element production, nuclear reactions, and fission.">
+  <title>Research | Nuclear Astrophysics and Nucleosynthesis</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #202936;
+      --muted: #526073;
+      --line: #d9e0e8;
+      --accent: #155a8a;
+      --soft: #f5f8fb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--ink);
+      font: 16px/1.68 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+    .container { width: min(100% - 2.5rem, 920px); margin: 0 auto; }
+    a { color: var(--accent); text-underline-offset: 0.15em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .site-header { border-bottom: 1px solid var(--line); }
+    .utility { padding: 0.8rem 0 0.2rem; font-size: 0.88rem; }
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.55rem 1.5rem;
+      padding: 0.75rem 0 1rem;
+    }
+    .nav a { text-decoration: none; }
+    .nav a:hover, .nav a[aria-current="page"] { text-decoration: underline; }
+    .nav a[aria-current="page"] { font-weight: 700; color: var(--ink); }
+    main { padding: 2.25rem 0 3rem; }
+    h1, h2, h3 { line-height: 1.3; }
+    h1 { font-size: clamp(2rem, 4vw, 2.55rem); margin: 0 0 1rem; }
+    h2 { margin: 2.5rem 0 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--line); font-size: 1.48rem; }
+    h3 { margin: 0 0 0.45rem; font-size: 1.12rem; }
+    p { margin: 0.65rem 0 1rem; }
+    .lead { font-size: 1.08rem; }
+    .subtle { color: var(--muted); }
+    .research-themes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .theme { padding: 1.15rem 1.2rem; border: 1px solid var(--line); border-radius: 8px; }
+    .theme p { margin: 0; }
+    .methods { padding: 1rem 1.3rem; background: var(--soft); border-radius: 8px; }
+    .methods ul { margin: 0.2rem 0; padding-left: 1.3rem; }
+    .paper-list { padding-left: 1.5rem; }
+    .paper-list li { margin-bottom: 0.95rem; padding-left: 0.1rem; }
+    .paper-list .journal { color: var(--muted); }
+    .links { margin-top: 1.6rem; }
+    footer { padding: 1.1rem 0 2rem; border-top: 1px solid var(--line); font-size: 0.9rem; color: var(--muted); }
+    @media (max-width: 650px) {
+      .container { width: min(100% - 1.5rem, 920px); }
+      .research-themes { grid-template-columns: 1fr; }
+      main { padding-top: 1.6rem; }
+      .nav { gap: 0.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="utility"><a href="../index.html">Home Page</a></div>
+      <nav class="nav" aria-label="Research site navigation">
+        <a href="./index.html" aria-current="page">Research Top</a>
+        <a href="./pub.html">Publication List</a>
+        <a href="./presen.html">Presentations</a>
+        <a href="./grant.html">Research Grants</a>
+        <a href="../open/index.html">Open Sources (for research)</a>
+      </nav>
+    </div>
+  </header>
 
+  <main class="container">
+    <h1>Research Interests</h1>
+    <p class="lead">
+      My research focuses on <strong>nucleosynthesis and nuclear astrophysics</strong>:
+      how chemical elements are produced in stars, stellar explosions, and compact-object
+      environments, and how their abundances reflect the underlying physics.
+    </p>
+    <p>
+      Solar-system elemental and isotopic abundances provide important benchmarks for
+      tracing the chemical history of the Galaxy. I study the nuclear reactions and
+      decays that shape these abundances, using numerical simulations and uncertainty
+      analyses, often in collaboration with researchers in experimental nuclear physics
+      and observational astrophysics.
+    </p>
 
-    <title>
-      Research
-    </title>
-  </head>
+    <h2>Research Topics</h2>
+    <div class="research-themes">
+      <section class="theme">
+        <h3>Explosive nucleosynthesis in supernovae</h3>
+        <p>
+          Production of iron-group and radioactive nuclides in core-collapse supernovae,
+          and the sensitivity of <sup>56</sup>Ni production to helium-burning reactions
+          in pair-instability supernovae. A key question is how nuclear reaction-rate
+          uncertainties propagate into predicted yields.
+        </p>
+      </section>
+      <section class="theme">
+        <h3>X-ray bursts and neutron stars</h3>
+        <p>
+          Thermonuclear X-ray bursts and superbursts on accreting neutron stars,
+          including the <em>rp</em>-process, burst ashes, and the effects of neutron-star
+          structure and cooling. This work connects nucleosynthesis calculations with
+          observations from missions such as NinjaSat and MAXI.
+        </p>
+      </section>
+      <section class="theme">
+        <h3>Heavy-element nucleosynthesis</h3>
+        <p>
+          The <em>r</em>-, <em>s</em>-, <em>p</em>- and <em>&nu;p</em>-processes in stellar and
+          explosive environments. Topics include magnetorotational supernovae,
+          neutron-star mergers, and the identification of nuclear reactions that
+          most strongly affect the production of heavy elements.
+        </p>
+      </section>
+      <section class="theme">
+        <h3>Nuclear fission, reactions, and decays</h3>
+        <p>
+          Nuclear-physics inputs needed for astrophysical simulations, including
+          neutron-rich nuclei, beta decays, and fission. For fission, I have studied
+          post-fission properties using a hybrid approach combining Langevin dynamics
+          with the Hauser&ndash;Feshbach statistical model.
+        </p>
+      </section>
+      <section class="theme">
+        <h3>Nuclear-physics uncertainties</h3>
+        <p>
+          Monte Carlo variations of reaction rates and other nuclear inputs to
+          quantify abundance uncertainties and identify key reactions. Applications
+          span the <em>s</em>-, <em>p</em>- and <em>&nu;p</em>-processes as well as supernova
+          nucleosynthesis.
+        </p>
+      </section>
+      <section class="theme">
+        <h3>Galactic chemical evolution</h3>
+        <p>
+          Connections between nucleosynthetic yields, the enrichment of metal-poor
+          stars, and the chemical evolution of the Galaxy, including the role of
+          neutron-star mergers and magnetorotational supernovae.
+        </p>
+      </section>
+    </div>
 
-  <body>
+    <h2>Approach and Methods</h2>
+    <div class="methods">
+      <ul>
+        <li>Nuclear reaction-network calculations and stellar/explosion models</li>
+        <li>Monte Carlo sensitivity studies and uncertainty quantification</li>
+        <li>Nuclear fission dynamics and statistical decay calculations</li>
+        <li>Comparison with astronomical observations and experimental nuclear data</li>
+      </ul>
+    </div>
 
-    <h4><a href="../index.html">Home Page</a></h4>
+    <h2>Selected Publications</h2>
+    <p class="subtle">Representative papers selected to reflect recent work, research breadth, and citation impact. For a complete list, see the <a href="./pub.html">Publication List</a>.</p>
+    <ol class="paper-list">
+      <li>
+        H. Kawashimo, N. Nishimura &amp; Y. Suwa,
+        <a href="https://doi.org/10.1093/pasj/psag137">Temperature-resolved sensitivities of <sup>56</sup>Ni production to helium-burning reactions in pair-instability supernovae</a>.
+        <span class="journal">PASJ (2026), advance publication.</span>
+      </li>
+      <li>
+        N. Nishimura, C. Fr&ouml;hlich &amp; T. Rauscher,
+        <a href="https://doi.org/10.1093/mnras/stag152">Uncertainties in the production of iron-group nuclides in core-collapse supernovae from Monte Carlo variations of reaction rates</a>.
+        <span class="journal">MNRAS 546 (2026).</span>
+      </li>
+      <li>
+        A. Aoyama et al.,
+        <a href="https://doi.org/10.3847/2041-8213/addd00">Thermonuclear superburst of MAXI J1752&ndash;457 observed with NinjaSat and MAXI</a>.
+        <span class="journal">ApJL 986, L29 (2025).</span>
+      </li>
+      <li>
+        A. Dohi et al.,
+        <a href="https://doi.org/10.3847/1538-4357/ad0a67">Constraints on the Neutron-Star Structure from the Clocked X-Ray Burster 1RXS J180408.9&ndash;342058</a>.
+        <span class="journal">ApJ 960, 14 (2024).</span>
+      </li>
+      <li>
+        S. Tanaka, N. Nishimura, F. Minato &amp; Y. Aritomo,
+        <a href="https://doi.org/10.1103/PhysRevC.108.054607">Postfission properties of uranium isotopes: A hybrid method with Langevin dynamics and the Hauser&ndash;Feshbach statistical model</a>.
+        <span class="journal">Phys. Rev. C 108, 054607 (2023).</span>
+      </li>
+      <li>
+        N. Nishimura et al.,
+        <a href="https://doi.org/10.1093/mnras/stz2104">Uncertainties in &nu;p-process nucleosynthesis from Monte Carlo variation of reaction rates</a>.
+        <span class="journal">MNRAS 489, 1379 (2019).</span>
+      </li>
+      <li>
+        S. Fujibayashi, K. Kiuchi, N. Nishimura, Y. Sekiguchi &amp; M. Shibata,
+        <a href="https://doi.org/10.3847/1538-4357/aabafd">Mass ejection from the remnant of binary neutron star merger: viscous-radiation hydrodynamics study</a>.
+        <span class="journal">ApJ 860, 64 (2018).</span>
+      </li>
+      <li>
+        N. Nishimura et al.,
+        <a href="https://doi.org/10.3847/2041-8213/aa5dee">The intermediate r-process in core-collapse supernovae driven by magneto-rotational instability</a>.
+        <span class="journal">ApJL 836, L21 (2017).</span>
+      </li>
+      <li>
+        T. Rauscher, N. Nishimura, R. Hirschi, G. Cescutti, A. St. J. Murphy &amp; A. Heger,
+        <a href="https://doi.org/10.1093/mnras/stw2266">Uncertainties in the production of p nuclei in massive stars obtained from Monte Carlo variations</a>.
+        <span class="journal">MNRAS 463, 4153 (2016).</span>
+      </li>
+      <li>
+        N. Nishimura, T. Takiwaki &amp; F.-K. Thielemann,
+        <a href="https://doi.org/10.1088/0004-637X/810/2/109">The r-process nucleosynthesis in the various jet-like explosions of magnetorotational core-collapse supernovae</a>.
+        <span class="journal">ApJ 810, 109 (2015).</span>
+      </li>
+      <li>
+        S. Wanajo et al.,
+        <a href="https://doi.org/10.1088/2041-8205/789/2/L39">Production of all the r-process nuclides in the dynamical ejecta of neutron star mergers</a>.
+        <span class="journal">ApJL 789, L39 (2014).</span>
+      </li>
+      <li>
+        C. Winteler et al.,
+        <a href="https://doi.org/10.1088/2041-8205/750/1/L22">Magnetorotationally Driven Supernovae as the Origin of Early Galaxy r-process Elements?</a>.
+        <span class="journal">ApJL 750, L22 (2012).</span>
+      </li>
+    </ol>
 
-    <hr>
-
-    <h3>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="./index.html">Research Top</a>
-      &nbsp;&nbsp;
-      <a href="./pub.html">Publication List</a>
-      &nbsp;&nbsp;
-      <a href="./presen.html">Presentation</a>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <p class="links">
+      <a href="./pub.html">Full publication list</a>
+      &nbsp;·&nbsp;
+      <a href="https://scixplorer.org/public-libraries/TOcjh8UBQJCi24V2g6nrXA">Publication library on SciX</a>
+      &nbsp;·&nbsp;
+      <a href="./presen.html">Presentations</a>
+      &nbsp;·&nbsp;
+      <a href="./grant.html">Research Grants</a>
+      &nbsp;·&nbsp;
       <a href="../open/index.html">Open Sources</a>
-      (for research)
-    </h3>
-
-    <hr>
-
-    <h2>Research Interests</h2>
-
-    <p style='font-size:110%;'>
-
-The main focus of my research is <i>nucleosynthesis</i> (<a href='https://en.wikipedia.org/wiki/Nucleosynthesis'>Wikipedia</a>) in astrophysics—the formation of the chemical elements in a wide range of astrophysical environments, from the early Universe to stellar explosions. In simple terms, my goal is to understand the origin of the solar elemental abundances, which provide a standard reference for the chemical composition of the Universe and preserve the record of its 13.8-billion-year chemical evolution.
-
-Research on nucleosynthesis is inherently interdisciplinary, spanning theoretical physics, experimental nuclear physics using large-scale accelerator facilities, astrophysical modeling, and astronomical observations. This broad scope reflects my wide-ranging interests in fundamental physical and astronomical phenomena, including stars, supernovae, compact objects, the Big Bang, galaxies, cosmic rays, atomic nuclei, quarks, and gravity.
-
     </p>
+  </main>
 
-    <p style='font-size:110%;'>
-See, my <a href='./presen.html'>presentations</a> and <a href='./pub.html'>publication</a> for more details about individual research projects.
-    </p>
-
-
-    <h2>
-      Key words
-    </h2>
-
-    <ul>
-      <li>
-	<h3>Nucleosynthesis</h3>
-	<ul>
-	  <li>Heavy elements beyond iron: r-process, s-process and p-process</li>
-	</ul>
-      </li>
-      <li>
-	<h3>Massive Stars and Supernovae</h3>
-	<ul>
-	  <li>Stellar evolution</li>
-	  <li>Supernovae explosions</li>
-	</ul>
-      </li>
-      <li>
-	<h3>Compact Objects</h3>
-	<ul>
-	  <li>Neutron stars and Black holes</li>
-	  <li>Magnetars and 'hybrid stars'</li>
-	  <li>Compact object mergers</li>
-	  <li>Jets and accreation disks</li>
-	</ul>
-      </li>
-      <li>
-	<h3>Galaxies</h3>
-	<ul>
-	  <li>Chemical evolution</li>
-	</ul>
-      </li>
-
-      <li>
-	<h2>Nuclear Astrophysics</h2>
-	<ul>
-	  <li>Nuclear structure</li>
-	  <li>Weak interaction</li>
-	  <li>Nuclear data</li>
-	</ul>
-      </li>
-
-      <li>
-	<h2>Computing</h2>
-	<ul>
-	  <li>Parallel computing on supercomputer system</li>
-	  <li>Large shared memory architecture</li>
-	</ul>
-      </li>
-
-    </ul>
-
-
-    <hr>
-
-  </body>
-
+  <footer>
+    <div class="container">Research in nuclear astrophysics and nucleosynthesis</div>
+  </footer>
+</body>
 </html>
