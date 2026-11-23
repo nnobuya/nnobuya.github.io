@@ -1,147 +1,163 @@
-<html>
-
-  <head>
-    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-    <title>
-      Gensogakusho X Gensogousei
-    </title>
-
-  </head>
-
-  <body style="background-color:white">
-    <h4>
-      <a href="../index.html">Home Page</a>
-    </h4>
-
-
-    <h3>
-      <p style="background-color:#163C5B;" align="right">
-	<font color="white">
-	  元素楽章 &times; 元素合成 (GENSOGAKUSHO &times; GENSOGOSEI) &emsp;
-	</font>
-      </p>
-    </h3>
-
-    <div align="center">
-      <img src="./fig/title.png" width="1000">
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>元素楽章 × 元素合成 | GENSOGAKUSHO × GENSOGOSEI</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #202936;
+      --muted: #526073;
+      --line: #d9e0e8;
+      --accent: #155a8a;
+      --navy: #163c5b;
+      --soft: #f5f8fb;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+                   "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    .container { width: min(100% - 2.5rem, 1040px); margin-inline: auto; }
+    a { color: var(--accent); text-underline-offset: 0.16em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .site-header { border-bottom: 1px solid var(--line); }
+    .utility { padding: 0.8rem 0 0.65rem; font-size: 0.9rem; }
+    .project-bar { background: var(--navy); color: #fff; }
+    .project-bar h1 {
+      margin: 0;
+      padding: 0.7rem 0;
+      font-size: clamp(1.02rem, 2.1vw, 1.3rem);
+      line-height: 1.45;
+      font-weight: 650;
+      letter-spacing: 0.015em;
+      text-align: right;
+    }
+    .hero { padding-top: 1.4rem; }
+    .hero img { display: block; width: min(100%, 1000px); height: auto; margin: 0 auto; }
+    .language-switch { margin: 1.15rem 0 0; text-align: right; font-size: 0.94rem; }
+    .language-switch a { font-weight: 600; }
+    main { padding: 0.8rem 0 3.5rem; }
+    h2, h3 { line-height: 1.4; }
+    h2 { font-size: clamp(1.5rem, 3.3vw, 1.9rem); margin: 2.3rem 0 0.95rem; }
+    h3 { font-size: clamp(1.05rem, 2.3vw, 1.2rem); }
+    p { margin: 0.8rem 0 1.05rem; }
+    .intro { max-width: 90ch; }
+    .contents { padding-left: 1.5rem; }
+    .contents li { margin-bottom: 0.2rem; }
+    .usage { margin-top: 1.65rem; padding: 1.05rem 1.3rem; background: var(--soft); border-radius: 8px; }
+    .usage p:last-child { margin-bottom: 0; }
+    .guide-image { margin: 1.7rem auto 1.6rem; text-align: center; }
+    .guide-image img { display: block; width: min(100%, 600px); height: auto; margin-inline: auto; }
+    .section-heading {
+      margin: 2.35rem 0 1rem;
+      padding: 0.6rem 1rem;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 3px;
+      font-size: clamp(1.12rem, 2.4vw, 1.35rem);
+    }
+    .gallery { margin-top: 1.4rem; }
+    .gallery-pair { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 5fr); gap: 1.3rem; align-items: start; }
+    figure { margin: 0; min-width: 0; }
+    .gallery figure { margin-bottom: 1.65rem; }
+    figcaption { margin: 0 0 0.75rem; font-size: 1.02rem; font-weight: 650; line-height: 1.5; text-align: center; }
+    .gallery img, .future-figure img { display: block; width: 100%; height: auto; margin: 0 auto; }
+    .image-stack { display: grid; gap: 0.7rem; }
+    .gallery-wide { max-width: 1000px; margin-inline: auto; }
+    .future-figure { max-width: 1000px; margin: 1.25rem auto 1.8rem; }
+    .contact-list { padding-left: 1.4rem; }
+    .contact-list li { margin: 0.4rem 0; overflow-wrap: anywhere; }
+    .site-footer { border-top: 1px solid var(--line); padding: 1.25rem 0 2rem; color: var(--muted); font-size: 0.9rem; }
+    .site-footer p { margin: 0; }
+    @media (max-width: 650px) {
+      .container { width: min(100% - 1.5rem, 1040px); }
+      .project-bar h1 { text-align: left; }
+      .gallery-pair { grid-template-columns: 1fr; gap: 0; }
+      .language-switch { text-align: left; }
+      .usage { padding: 0.9rem 1rem; }
+      main { padding-bottom: 2.5rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container utility"><a href="../index.html">Home Page</a></div>
+    <div class="project-bar">
+      <div class="container"><h1>元素楽章 × 元素合成 (GENSOGAKUSHO × GENSOGOSEI)</h1></div>
     </div>
-
-
-    <h1><a href="index.html">English Version</a></h1>
-    <hr>
-
-    <h1><u>って何？</u></h1>
-
-    <font size="4">皆さんは、中学校や高校の理科の授業で<b>元素の周期表</b>を習ったことがあると思います。様々な元素が化学的な性質を元に分類されて整然と整理された表です。物質の根源的な要素である元素の実物をみると様々な「顔」をしています。これら多様な元素たちを擬人化するプロジェクトが<a href="https://agedoridori.jimdofree.com/gensogakusho/">元素楽章</a>（&copy; <a href="https://agedoridori.jimdofree.com">揚げ鶏々</a>）で、元素を擬人化したイラスト、元素が住む世界を表現した絵の制作が行われています。「元素楽章&times;元素合成」プロジェクトは、元素楽章の世界と宇宙の元素合成の研究者（西村）との共同制作コラボレーションです。元素楽章の<b>元素擬人化キャラクターたちが宇宙の元素合成を舞台に躍動する</b>（？）様子をイラスト化しました。宇宙の天体現象や元素の変換（原子核変換）に関する<b>最新の研究成果</b>に基づいて、元素キャラクターたちが宇宙の元素合成を演じています。元素楽章のストーリーの１コマとして可愛らしく愉快に表現された宇宙の元素合成の魅力をお楽しみください。元素楽章の世界は、元素の発見の物語や化学的性質を織り込まれており、元素たちのイラストは本格的な科学解説にも利用できます。
-
-興味ある方は、<a href="https://agedoridori.jimdofree.com/gensogakusho/">元素楽章のサイト</a>や宇核連研究会（2022年7月）での<a href="./file/ukakuren2022.pdf">発表スライド</a>もご参照ください。
-<br><br>
-現在のところ、
-<ul>
-  <li>
-    <a href="#part1">中性子捕獲による元素合成（sプロセスとrプロセス）</a>（2022年8月公開、5点）
-  </li>
-</ul>
-に関するイラストが公開されています。</font>
-
-    <br>
-    <br>
-
-    <font size="4">このサイトで公開、あるいは製作者たちによって配布されるイラストは、研究発表、教育活動、アウトリーチなどの<b>科学解説の目的であれば自由にお使いください。</b>適切に引用されていれば、<b>発表資料等を公開して構いません。</b>以上の使用について、事前・事後の連絡も必要はありません。（義務ではありませんが、「こんなところで、こんな風に使ったよ」とかフィードバックをもらえると嬉しいです。）ただし、<b>オリジナル画像の再配布</b>や<b>著作表示を改変しての使用や公開</b>はしないでください。また、<b>無許可でイラストを使用した製品を作成し販売</b>することも禁止します。利用にあたって気になるケースである場合は、<a href="#inquiry">問い合わせ先</a>にご相談ください。その他、高解像度の画像や背景や文字なしバージョンを希望する場合なども、直接ご相談ください。（全ての要望に対応できるわけではありません。）</font>
-
-    <br>
-    <br>
-
-    <div style="text-align:center;">
-      <img src="./fig/readme.png" width="600">&emsp;&emsp;&emsp;
+    <div class="container hero">
+      <img src="./fig/title.png" width="1000" alt="GENSOGAKUSHO × GENSOGOSEI project illustration">
+      <nav class="language-switch" aria-label="Language"><a href="./index.html">English Version / 英語版</a></nav>
     </div>
+  </header>
+  <main class="container">
+    <section class="intro" aria-labelledby="about">
+      <h2 id="about">って何？</h2>
+      <p>皆さんは、中学校や高校の理科の授業で<b>元素の周期表</b>を習ったことがあると思います。様々な元素が化学的な性質を元に分類されて整然と整理された表です。物質の根源的な要素である元素の実物をみると様々な「顔」をしています。これら多様な元素たちを擬人化するプロジェクトが<a href="https://agedoridori.jimdofree.com/gensogakusho/">元素楽章</a>（&copy; <a href="https://agedoridori.jimdofree.com">揚げ鶏々</a>）で、元素を擬人化したイラスト、元素が住む世界を表現した絵の制作が行われています。「元素楽章&times;元素合成」プロジェクトは、元素楽章の世界と宇宙の元素合成の研究者（西村）との共同制作コラボレーションです。元素楽章の<b>元素擬人化キャラクターたちが宇宙の元素合成を舞台に躍動する</b>（？）様子をイラスト化しました。宇宙の天体現象や元素の変換（原子核変換）に関する<b>最新の研究成果</b>に基づいて、元素キャラクターたちが宇宙の元素合成を演じています。元素楽章のストーリーの１コマとして可愛らしく愉快に表現された宇宙の元素合成の魅力をお楽しみください。元素楽章の世界は、元素の発見の物語や化学的性質を織り込まれており、元素たちのイラストは本格的な科学解説にも利用できます。</p>
+      <p>興味ある方は、<a href="https://agedoridori.jimdofree.com/gensogakusho/">元素楽章のサイト</a>や宇核連研究会（2022年7月）での<a href="./file/ukakuren2022.pdf">発表スライド</a>もご参照ください。</p>
+      <p>現在のところ、次のテーマに関するイラストが公開されています。</p>
+      <ul class="contents"><li><a href="#part1">中性子捕獲による元素合成（sプロセスとrプロセス）</a>（2022年8月公開、5点）</li></ul>
+    </section>
 
-    <hr>
+    <section class="usage" aria-label="イラストの利用について">
+      <p>このサイトで公開、あるいは製作者たちによって配布されるイラストは、研究発表、教育活動、アウトリーチなどの<b>科学解説の目的であれば自由にお使いください。</b>適切に引用されていれば、<b>発表資料等を公開して構いません。</b>以上の使用について、事前・事後の連絡も必要はありません。（義務ではありませんが、「こんなところで、こんな風に使ったよ」とかフィードバックをもらえると嬉しいです。）ただし、<b>オリジナル画像の再配布</b>や<b>著作表示を改変しての使用や公開</b>はしないでください。また、<b>無許可でイラストを使用した製品を作成し販売</b>することも禁止します。利用にあたって気になるケースである場合は、<a href="#inquiry">問い合わせ先</a>にご相談ください。その他、高解像度の画像や背景や文字なしバージョンを希望する場合なども、直接ご相談ください。（全ての要望に対応できるわけではありません。）</p>
+    </section>
 
-    <h1><u>作品たち</u></h1>
+    <figure class="guide-image"><img src="./fig/readme.png" width="600" alt="イラストの利用方法と著作権に関する案内" loading="lazy"></figure>
 
-    <h2><p style="background-color:#163C5B;" id="part1"><font color="white">&emsp;&#9733; 中性子捕獲による元素合成（sプロセスとrプロセス）</font></p></h2>
+    <section aria-labelledby="works">
+      <h2 id="works">作品たち</h2>
+      <h3 class="section-heading" id="part1">中性子捕獲による元素合成（sプロセスとrプロセス）</h3>
+      <p>sプロセスとrプロセスと呼ばれる元素合成に関するイラストです。</p>
+      <div class="gallery">
+        <div class="gallery-pair">
+          <figure>
+            <figcaption>（β崩壊）安定の谷とsプロセスとrプロセス</figcaption>
+            <img src="./fig/part1_nz_valley.png" width="400" alt="β安定の谷とsプロセス・rプロセスの模式図" loading="lazy">
+          </figure>
+          <figure>
+            <figcaption>核図表上での元素合成の進行（上）と終端（下）</figcaption>
+            <div class="image-stack">
+              <img src="./fig/part1_rs_termination.png" width="500" alt="核図表上の元素合成・上の図" loading="lazy">
+              <img src="./fig/part1_rs_flow.png" width="500" alt="核図表上の元素合成・下の図" loading="lazy">
+            </div>
+          </figure>
+        </div>
+        <figure class="gallery-wide">
+          <figcaption>sプロセスとrプロセスのしくみ</figcaption>
+          <img src="./fig/part1_rs-proc.png" width="1000" alt="sプロセスとrプロセスの仕組みを示す図" loading="lazy">
+        </figure>
+        <figure class="gallery-wide">
+          <figcaption>核分裂について（非対称分裂と対称分裂）</figcaption>
+          <img src="./fig/part1_fission.png" width="1000" alt="非対称核分裂と対称核分裂の模式図" loading="lazy">
+        </figure>
+      </div>
+    </section>
 
-    <font size="4">sプロセスとrプロセスと呼ばれる元素合成に関するイラストです。</font>
+    <section aria-labelledby="future">
+      <h2 class="section-heading" id="future">今後？</h2>
+      <p>好評だったら第２弾もあるかも！？　応援よろしく！</p>
+    </section>
 
-    <br>
-    <br>
-
-    <center>
-
-      <table>
-	<tr>
-	  <td>
-	    <center>
-	      <h3>（&beta;崩壊）安定の谷とsプロセスとrプロセス</h3>
-	    </center>
-	  </td>
-	  <td>
-	    <center>
-	      <h3>核図表上での元素合成の進行（上）と終端（下）</h3>
-	    </center>
-	  </td>
-	</tr>
-	<tr>
-          <td rowspan="2"><img src="./fig/part1_nz_valley.png" width="400"></td>
-          <td><img src="./fig/part1_rs_termination.png" width="500"></td>
-	</tr>
-	<tr>
-          <td><img src="./fig/part1_rs_flow.png" width="500"></td>
-	</tr>
-	<tr>
-	  <td colspan="2">
-	    <center>
-	      <h3>sプロセスとrプロセスのしくみ</h3>
-	    </center>
-	  </td>
-	</tr>
-	<tr>
-          <td colspan="2"><img src="./fig/part1_rs-proc.png" width="1000"></td>
-	</tr>
-	<td colspan="2">
-	  <center>
-	    <h3>核分裂について（非対称分裂と対称分裂）</h3>
-	  </center>
-	</td>
-	<tr>
-          <td colspan="2"><img src="./fig/part1_fission.png" width="1000"></td>
-	</tr>
-      </table>
-    </center>
-
-    <h2><p style="background-color:#163C5B;">
-	<font color="white">&emsp;&#9733; 今後？</font>
-    </p></h2>
-
-    <font size="4">
-      好評だったら第２弾もあるかも！？　応援よろしく！
-    </font>
-
-    <h1 id="inquiry"><u>問い合わせ</u></h1>
-
-    <font size="4">
-      何かあれば、プロジェクトメンバーまでどうぞ。（ _at_ の部分を @ に変えてください。）どちらか片方宛でもいいですし、両方に連絡していただいても構いません。
-    </font>
-
-    <ul>
-      <li>
-	<font size="5">（イラスト作成）揚げ鶏々 ( e-mail: agedoridori _at_ gmail.com )</font>
-      </li>
-      <li>
-	<font size="5">（サイエンス担当）西村 信哉 ( e-mail: nobuya _at_ cns.s.u-tokyo.ac.jp)</font>
-      </li>
-    </ul>
- 
-    <hr>
-
-    <br>
-
-    last updated: 15 Aug 2022
-    <br>
-    <br>
-
-  </body>
-
+    <section aria-labelledby="inquiry">
+      <h2 id="inquiry">問い合わせ</h2>
+      <p>何かあれば、プロジェクトメンバーまでどうぞ。（ _at_ の部分を @ に変えてください。）どちらか片方宛でもいいですし、両方に連絡していただいても構いません。</p>
+      <ul class="contact-list">
+        <li>（イラスト作成）揚げ鶏々 ( e-mail: agedoridori _at_ gmail.com )</li>
+        <li>（サイエンス担当）西村 信哉 ( e-mail: nobuya _at_ cc.kogakuin.ac.jp)</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><p>Last updated: <time datetime="2022-08-15">15 Aug 2022</time></p></div></footer>
+</body>
 </html>

@@ -1,175 +1,170 @@
-<html>
-
-  <head>
-    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-    <title>
-      Gensogakusho X Gensogousei
-    </title>
-
-  </head>
-
-  <body style="background-color:white">
-    <h4>
-      <a href="../index.html">Home Page</a>
-    </h4>
-
-
-    <h3>
-      <p style="background-color:#163C5B;" align="right">
-	<font color="white">
-	  元素楽章 &times; 元素合成 (GENSOGAKUSHO &times; GENSOGOSEI) &emsp;
-	</font>
-      </p>
-    </h3>
-
-    <div align="center">
-      <img src="./fig/title.png" width="1000">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GENSOGAKUSHO × GENSOGOSEI | GENSOGAKUSHO × GENSOGOSEI</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #202936;
+      --muted: #526073;
+      --line: #d9e0e8;
+      --accent: #155a8a;
+      --navy: #163c5b;
+      --soft: #f5f8fb;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+                   "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    .container { width: min(100% - 2.5rem, 1040px); margin-inline: auto; }
+    a { color: var(--accent); text-underline-offset: 0.16em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .site-header { border-bottom: 1px solid var(--line); }
+    .utility { padding: 0.8rem 0 0.65rem; font-size: 0.9rem; }
+    .project-bar { background: var(--navy); color: #fff; }
+    .project-bar h1 {
+      margin: 0;
+      padding: 0.7rem 0;
+      font-size: clamp(1.02rem, 2.1vw, 1.3rem);
+      line-height: 1.45;
+      font-weight: 650;
+      letter-spacing: 0.015em;
+      text-align: right;
+    }
+    .hero { padding-top: 1.4rem; }
+    .hero img { display: block; width: min(100%, 1000px); height: auto; margin: 0 auto; }
+    .language-switch { margin: 1.15rem 0 0; text-align: right; font-size: 0.94rem; }
+    .language-switch a { font-weight: 600; }
+    main { padding: 0.8rem 0 3.5rem; }
+    h2, h3 { line-height: 1.4; }
+    h2 { font-size: clamp(1.5rem, 3.3vw, 1.9rem); margin: 2.3rem 0 0.95rem; }
+    h3 { font-size: clamp(1.05rem, 2.3vw, 1.2rem); }
+    p { margin: 0.8rem 0 1.05rem; }
+    .intro { max-width: 90ch; }
+    .contents { padding-left: 1.5rem; }
+    .contents li { margin-bottom: 0.2rem; }
+    .usage { margin-top: 1.65rem; padding: 1.05rem 1.3rem; background: var(--soft); border-radius: 8px; }
+    .usage p:last-child { margin-bottom: 0; }
+    .guide-image { margin: 1.7rem auto 1.6rem; text-align: center; }
+    .guide-image img { display: block; width: min(100%, 600px); height: auto; margin-inline: auto; }
+    .section-heading {
+      margin: 2.35rem 0 1rem;
+      padding: 0.6rem 1rem;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 3px;
+      font-size: clamp(1.12rem, 2.4vw, 1.35rem);
+    }
+    .gallery { margin-top: 1.4rem; }
+    .gallery-pair { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 5fr); gap: 1.3rem; align-items: start; }
+    figure { margin: 0; min-width: 0; }
+    .gallery figure { margin-bottom: 1.65rem; }
+    figcaption { margin: 0 0 0.75rem; font-size: 1.02rem; font-weight: 650; line-height: 1.5; text-align: center; }
+    .gallery img, .future-figure img { display: block; width: 100%; height: auto; margin: 0 auto; }
+    .image-stack { display: grid; gap: 0.7rem; }
+    .gallery-wide { max-width: 1000px; margin-inline: auto; }
+    .future-figure { max-width: 1000px; margin: 1.25rem auto 1.8rem; }
+    .contact-list { padding-left: 1.4rem; }
+    .contact-list li { margin: 0.4rem 0; overflow-wrap: anywhere; }
+    .site-footer { border-top: 1px solid var(--line); padding: 1.25rem 0 2rem; color: var(--muted); font-size: 0.9rem; }
+    .site-footer p { margin: 0; }
+    @media (max-width: 650px) {
+      .container { width: min(100% - 1.5rem, 1040px); }
+      .project-bar h1 { text-align: left; }
+      .gallery-pair { grid-template-columns: 1fr; gap: 0; }
+      .language-switch { text-align: left; }
+      .usage { padding: 0.9rem 1rem; }
+      main { padding-bottom: 2.5rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container utility"><a href="../index.html">Home Page</a></div>
+    <div class="project-bar">
+      <div class="container"><h1>元素楽章 × 元素合成 (GENSOGAKUSHO × GENSOGOSEI)</h1></div>
     </div>
-
-    <h1><a href="index_jp.html">Japanese Version</a></h1>
-
-    <hr>
-
-    <h1><u>What's this?</u></h1>
-
-    <font size="5">You may have learned about the periodic table of elements in school science classes. It is a table that organizes various elements based on their chemical properties in an orderly manner. The <a href="https://agedoridori.jimdofree.com/gensogakusho/">GENSOGAKUSHO</a> (&copy; <a href="https://agedoridori.jimdofree.com">Agedoridori</a>) project aims to anthropomorphize these elements and produce illustrations that depict the world in which they live. The project collaborates with a scientific researcher (N. Nishimura) in the field of nucleosynthesis in the universe, resulting in the GENSOGAKUSHO x GENSOGSEI (nucleosynthesis) project. The illustrations portray anthropomorphic elemental characters engaged in the process of nucleosynthesis in the universe, based on the latest research findings on celestial phenomena and nuclear transformations.<br>
-<br>
-
-The illustrations show the charm of nucleosynthesis in the universe, presented in a cute characters and sence of humor, in the context of the GENSOGAKUSHO story. This world weaves together the discovery of elements and their chemical properties, and the illustrations of the elements can also serve for authentic scientific commentary.
-<br>
-<br>
-
-Interested individuals are invited to explore <a href="https://agedoridori.jimdofree.com/gensogakusho/">the GENSOGAKUSHO website</a> and view the <a href="./file/ukakuren2022.pdf">presentation slides</a> from the UKAKUREN conference (July 2022).</font>
-
-    <br>
-
-<br>
-<font size="5">
-At the moment, illustrations about
-<ul>
-  <li>
-    <a href="#part1">Nucleosynthesis by the neutron capture (s-process and r-process)</a> (August 2022, 5 items)
-  </li>
-</ul>
-have been published</font>
-
-    <br>
-    <br>
-
-    <font size="5">You can <b>freely use illustrations on this website for scientific and educational purposes</b>, such as research presentations, education, and outreach activities. You may <b>publish your presentations and other materials as long as they are properly cited.</b> No prior or subsequent notification is required. (Although it is not mandatory, we would be happy to receive feedback, such as "I used this in this way in this place," etc.)
-
-Please <b>do not redistribute the original images or alter the copyright notice</b> to use or publish them. <b>Creating and selling products using illustrations without permission</b> is also prohibited. If you have any concerns about the use of the image, please get in touch with the designated contact persons. Please <a href="#inquiry">contact us</a> directly if you have any other requests for high-resolution images or versions without backgrounds or text. (Please note that we cannot respond to all requests.)</font>
-
-    <br>
-    <br>
-
-    <div style="text-align:center;">
-      <img src="./fig/readme.png" width="600">&emsp;&emsp;&emsp;
+    <div class="container hero">
+      <img src="./fig/title.png" width="1000" alt="GENSOGAKUSHO × GENSOGOSEI project illustration">
+      <nav class="language-switch" aria-label="Language"><a href="./index_jp.html">Japanese Version / 日本語版</a></nav>
     </div>
+  </header>
+  <main class="container">
+    <section class="intro" aria-labelledby="about">
+      <h2 id="about">What's this?</h2>
+      <p>You may remember learning about the <strong>periodic table of elements</strong> in school science classes. The table organizes chemical elements according to their properties. Each element has its own distinctive characteristics. The <a href="https://agedoridori.jimdofree.com/gensogakusho/">GENSOGAKUSHO</a> (&copy; <a href="https://agedoridori.jimdofree.com">Agedoridori</a>) project personifies these elements, creating character illustrations and imagining the world they inhabit.</p>
+      <p><strong>GENSOGAKUSHO × GENSOGOSEI</strong> (nucleosynthesis) is a collaboration between the GENSOGAKUSHO artist and Nobuya Nishimura, a researcher in nuclear astrophysics. The illustrations depict these element characters taking part in astrophysical nucleosynthesis—how atomic nuclei are formed and transformed in the Universe. Drawing on research into astronomical phenomena and nuclear reactions, the characters bring nucleosynthesis to life with charm and humor.</p>
+      <p>The GENSOGAKUSHO world also incorporates stories about the discovery of elements and their chemical properties. The illustrations can therefore be enjoyed as part of a fictional world while also serving as useful material for scientific explanations.</p>
+      <p>For more information, visit <a href="https://agedoridori.jimdofree.com/gensogakusho/">the GENSOGAKUSHO website</a> or see the <a href="./file/ukakuren2022.pdf">presentation slides</a> from the UKAKUREN workshop (July 2022).</p>
+      <p>Currently, the following illustrations are available:</p>
+      <ul class="contents"><li><a href="#part1">Neutron-capture nucleosynthesis (the s- and r-processes)</a> (released in August 2022; five illustrations)</li></ul>
+    </section>
 
-    <hr>
+    <section class="usage" aria-label="Guidelines for using the illustrations">
+      <p>You may <strong>freely use illustrations published on this website or distributed by the creators for scientific and educational purposes</strong>, including research presentations, teaching, and public outreach. You may also <strong>publish presentations and other materials containing the illustrations, provided that they are properly credited</strong>. No advance permission or follow-up notification is required for these uses. Feedback is welcome, although it is not required.</p>
+      <p>However, please <strong>do not redistribute the original image files or alter the copyright notices</strong>. <strong>Creating or selling products featuring the illustrations without permission</strong> is also prohibited. If you are unsure whether a particular use is permitted, please <a href="#inquiry">contact us</a>. You can also inquire about high-resolution files or versions without backgrounds or text, although we may not be able to accommodate every request.</p>
+    </section>
 
-    <h1><u>Works</u></h1>
+    <figure class="guide-image"><img src="./fig/readme.png" width="600" alt="Guidelines and credits for using the illustrations" loading="lazy"></figure>
 
-    <h2><p style="background-color:#163C5B;" id="part1"><font color="white">&emsp;&#9733; Nucleosynthesis by the neutron capture (s-process and r-process)</font></p></h2>
+    <section aria-labelledby="works">
+      <h2 id="works">Works</h2>
+      <h3 class="section-heading" id="part1">Neutron-capture nucleosynthesis (the s- and r-processes)</h3>
+      <p>Illustrations of nucleosynthesis through the s- and r-processes.</p>
+      <div class="gallery">
+        <div class="gallery-pair">
+          <figure>
+            <figcaption>The valley of β-stability and the s- and r-processes</figcaption>
+            <img src="./fig/part1_nz_valley.png" width="400" alt="The valley of beta stability and the s- and r-processes" loading="lazy">
+          </figure>
+          <figure>
+            <figcaption>Nucleosynthesis on the chart of nuclides: progression (top) and termination (bottom)</figcaption>
+            <div class="image-stack">
+              <img src="./fig/part1_rs_termination.png" width="500" alt="Illustration of nucleosynthesis on the chart of nuclides, upper panel" loading="lazy">
+              <img src="./fig/part1_rs_flow.png" width="500" alt="Illustration of nucleosynthesis on the chart of nuclides, lower panel" loading="lazy">
+            </div>
+          </figure>
+        </div>
+        <figure class="gallery-wide">
+          <figcaption>How the s- and r-processes work</figcaption>
+          <img src="./fig/part1_rs-proc.png" width="1000" alt="Illustration of the mechanisms of the s- and r-processes" loading="lazy">
+        </figure>
+        <figure class="gallery-wide">
+          <figcaption>Nuclear fission: asymmetric and symmetric fission</figcaption>
+          <img src="./fig/part1_fission.png" width="1000" alt="Illustration comparing asymmetric and symmetric nuclear fission" loading="lazy">
+        </figure>
+      </div>
+    </section>
 
-    <font size="4">Illustrations about s-process and r-process nucleosynthesis</font>
+    <section aria-labelledby="future">
+      <h2 class="section-heading" id="future">Future plans?</h2>
+      <p>There may be a second installment if this series is well received. Thank you for your support!</p>
+      <figure class="future-figure">
+        <figcaption>How the p-process (γ-process) works</figcaption>
+        <img src="./fig/part2_p-proc.png" width="1000" alt="Illustration of the p-process (gamma-process)" loading="lazy">
+      </figure>
+    </section>
 
-    <br>
-    <br>
-
-    <center>
-
-      <table>
-	<tr>
-	  <td>
-	    <center>
-	      <h3>(&beta;-decay) The valley of stability with<br>the s-process and r-process</h3><br>
-	    </center>
-	  </td>
-	  <td>
-	    <center>
-	      <h3>Nucleosynthesis on the chart of nuclides,<br>progress (up) and termination (down)</h3>
-	    </center>
-	  </td>
-	</tr>
-	<tr>
-          <td rowspan="2"><img src="./fig/part1_nz_valley.png" width="400"></td>
-          <td><img src="./fig/part1_rs_termination.png" width="500"></td>
-	</tr>
-	<tr>
-          <td><img src="./fig/part1_rs_flow.png" width="500"></td>
-	</tr>
-	<tr>
-	  <td colspan="2">
-	    <center>
-	      <h3>s-process and r-process (mechanism)</h3>
-	    </center>
-	  </td>
-	</tr>
-	<tr>
-          <td colspan="2"><img src="./fig/part1_rs-proc.png" width="1000"></td>
-	</tr>
-	<td colspan="2">
-	  <center>
-	    <h3>Nulcear fission (asymmetric vs. symmetric)</h3>
-	  </center>
-	</td>
-	<tr>
-          <td colspan="2"><img src="./fig/part1_fission.png" width="1000"></td>
-	</tr>
-      </table>
-
-    </center>
-
-    <h2><p style="background-color:#163C5B;">
-	<font color="white">&emsp;&#9733; Future plan?</font>
-    </p></h2>
-
-    <font size="5">
-
-      There may be the second season! Thanks for your support!
-      <center>
-      <table>
-	<tr>
-	  <td colspan="2">
-	    <center>
-	      <h3>p-process (&gamma;-process) (mechanism)</h3>
-	    </center>
-	  </td>
-	</tr>
-	<tr>
-          <td colspan="2"><img src="./fig/part2_p-proc.png" width="1000"></td>
-	</tr>
-      </table>
-      </center>
-
-    </font>
-
-    <h1 id="inquiry"><u>Inquiry</u></h1>
-
-    <font size="5">
-If you have any questions, please get in touch with the project members. (Please change the _at_ to @) You may address it to either one of us or you may contact both of us.
-    </font>
-
-    <ul>
-      <li>
-	<font size="5">(Illustration) Agedoridori ( e-mail: agedoridori _at_ gmail.com )</font>
-      </li>
-      <li>
-	<font size="5">(Science) Nobuya Nishimura ( e-mail: nobuya.nishimura _at_ cns.s.u-tokyo.ac.jp)</font>
-      </li>
-    </ul>
- 
-    <hr>
-
-    <br>
-
-    last updated: 15 Aug 2022
-    <br>
-    <br>
-
-  </body>
-
+    <section aria-labelledby="inquiry">
+      <h2 id="inquiry">Contact</h2>
+      <p>If you have any questions, please contact either or both project members. To use the email addresses below, replace <code>_at_</code> with <code>@</code>.</p>
+      <ul class="contact-list">
+        <li>(Illustrations) Agedoridori (e-mail: agedoridori _at_ gmail.com)</li>
+        <li>(Scientific content) Nobuya Nishimura (e-mail: nobuya _at_ cc.kogakuin.ac.jp)</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><p>Last updated: <time datetime="2022-08-15">15 Aug 2022</time></p></div></footer>
+</body>
 </html>
